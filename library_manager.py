@@ -337,7 +337,7 @@ elif st.session_state.current_view == "search":
                             <p><strong>Author:</strong> {book['author']}</p>
                             <p><strong>Genre:</strong> {book['genre']}</p>
                             <p><span class='{"read-badge" if book["read-status"] else "unread-badge"}'>{
-                                "Read" if book["read-status"] else "Unread"
+                                "Read" if book.get["read-status"] else "Unread"
                             }</span></p>
                             </div>
 """, unsafe_allow_html=True)
