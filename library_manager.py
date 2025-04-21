@@ -35,12 +35,14 @@ st.markdown("""
     }
     .sucess-message {
         padding: 1rem;
+        color: black;
         background-color: #ECFDF5;
         border-left: 6px solid #108981;
         border-radius: 0.37rem;
     }
     .warning-message {
         padding: 1rem;
+        color: black;
         background-color: #FEF3C7;
         border-left: 6px solid #F59E08;
         border-radius: 0.375rem;
@@ -311,7 +313,7 @@ elif st.session_state.current_view == "library":
                         save_library()
                         st.rerun()
     if st.session_state.book_removed:
-        st.markdown("div class='sucess-message'> Book removed sucessfully!</div>", unsafe_allow_html=True)
+        st.markdown("<div class='sucess-message'> Book removed sucessfully!</div>", unsafe_allow_html=True)
         st.session_state.book_removed = False
 elif st.session_state.current_view == "search":
     st.markdown("<h2 class='sub-header'> search books</h2>", unsafe_allow_html=True)
