@@ -48,7 +48,7 @@ st.markdown("""
         border-radius: 0.375rem;
     }
     .book-card {
-        background-color: #F3F4F6;
+        background-color: #1E3A8A;
         color: black
         border-radius: 0.5rem;
         padding: 1rem;
