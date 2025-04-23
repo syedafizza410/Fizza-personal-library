@@ -334,7 +334,7 @@ elif st.session_state.current_view == "search":
                             <h3>{book['title']}</h3>
                             <p><strong>Author:</strong> {book['author']}</p>
                             <p><strong>Genre:</strong> {book['genre']}</p>
-                            <p><span class='{"read-badge" if book["read-status"] else "unread-badge"}'>{
+                            <p><span class='{"read-badge" if book.get("read-status") else "unread-badge"}'>{
                                 "Read" if book["read-status"] else "Unread"
                             }</span></p>
                             </div>
@@ -355,7 +355,7 @@ elif st.session_state.current_view == "stats":
         with col2:
             st.metric("Book Read", stats['read_books'])
         with col3:
-            st.metric("Percentage Read", f"{stats['percentage_read'] :.1f}%")
+            st.metric("Percentage Read", f"{stats.get('percentage_read', 0) :.1f}%")
         create_visulation(stats)
 
         if stats['authors']:
